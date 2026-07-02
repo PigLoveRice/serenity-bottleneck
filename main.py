@@ -21,7 +21,7 @@ from src.knowledge.obsidian import (
     write_candidate_note, write_evidence_note, write_theme_note,
 )
 from src.calibration.tracker import cmd_calibrate
-from src.delivery.feishu import push_report_file
+from src.delivery.feishu import push_full
 from src.types import ScreenResult
 
 logging.basicConfig(
@@ -113,8 +113,10 @@ def cmd_screen(theme_id: str):
     print(f"📄 报告: {path}")
     print(f"⏱️  耗时: {duration:.0f}s")
 
-    # Phase 3: 飞书推送
-    push_report_file(str(path))
+    # Phase 3: 飞书推送（群消息 + 云文档）
+    result = push_full(report, f"{theme.label}_{run_id}")
+    if result["doc_id"]:
+        print(f"📎 飞书文档: https://bytedance.feishu.cn/docx/{result['doc_id']}")
 
     print()
     print("=" * 60)
