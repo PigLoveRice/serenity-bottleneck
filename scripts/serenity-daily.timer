@@ -1,0 +1,11 @@
+[Unit]
+Description=Serenity Bottleneck Daily Timer
+Requires=serenity-daily.service
+
+[Timer]
+OnCalendar=*-*-* 18:30:00
+RandomizedDelaySec=300
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Serenity Bottleneck Daily Screen
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/home/serenity-bottleneck
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -u /home/serenity-bottleneck/main.py screen --theme ai-optical-cpo
+StandardOutput=append:/var/log/serenity-daily.log
+StandardError=append:/var/log/serenity-daily.log
+
+[Install]
+WantedBy=multi-user.target

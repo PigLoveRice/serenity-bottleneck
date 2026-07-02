@@ -1,0 +1,22 @@
+# .env (含 API keys)
+.env
+.venv/
+venv/
+
+# 数据库
+data/candidates.db
+data/*.db
+
+# 运行产物
+runs/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
