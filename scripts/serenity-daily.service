@@ -7,7 +7,7 @@ Type=oneshot
 User=root
 WorkingDirectory=/home/serenity-bottleneck
 Environment=PYTHONUNBUFFERED=1
-ExecStart=/usr/bin/python3 -u /home/serenity-bottleneck/main.py screen --theme ai-optical-cpo
+ExecStart=/usr/bin/python3 -u /home/serenity-bottleneck/main.py run-all
 StandardOutput=append:/var/log/serenity-daily.log
 StandardError=append:/var/log/serenity-daily.log
 
