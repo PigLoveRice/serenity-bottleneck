@@ -6,6 +6,7 @@ venv/
 # 数据库
 data/candidates.db
 data/*.db
+data/*.db-*
 
 # 运行产物
 runs/
