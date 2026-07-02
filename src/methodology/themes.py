@@ -206,6 +206,25 @@ THEMES: list[BottleneckTheme] = [
             "地方财政约束项目进度", "分布式光伏冲击配电网",
         ],
     ),
+    BottleneckTheme(
+        id="ai-server-hardware",
+        label="AI 服务器硬件",
+        keywords=[
+            "AI服务器", "GPU服务器", "液冷散热", "冷板",
+            "CDU", "冷却液", "HBM", "高多层PCB",
+            "高速背板连接器", "铜箔", "CCL覆铜板",
+            "服务器电源", "PSU", "电源模块", "功率电感",
+            "机柜", "PDU", "精密空调", "浸没式液冷",
+        ],
+        positive_signals=[
+            "AI 算力投资持续增长", "NVIDIA/AMD 新品量产",
+            "液冷渗透率加速提升", "服务器电源功率密度提升",
+        ],
+        negative_signals=[
+            "算力投资周期性回落", "风冷方案延续",
+            "铜连接替代光互联", "单机柜功率密度增长放缓",
+        ],
+    ),
 ]
 
 
