@@ -44,7 +44,7 @@ def cmd_screen(theme_id: str):
     run_id = uuid.uuid4().hex[:8]
     db = get_db()
 
-    print(f"🔍 开始筛选: {theme.label} (run={run_id})")
+    print(f"🔍 开始投研: {theme.label} (run={run_id})")
     print()
 
     # Phase 1: 供应链拆解 + 候选搜索 + 评分
@@ -263,7 +263,7 @@ def main():
         print("Serenity 产业链瓶颈投研 Agent")
         print()
         print("用法:")
-        print("  python main.py screen [--theme <id>]    瓶颈筛选 + 持久化 + 证据提取")
+        print("  python main.py screen [--theme <id>]    产业投研 + 持久化 + Obsidian")
         print("  python main.py candidates [--theme <id>] 列出候选")
         print("  python main.py candidates --killed       列出已终止候选")
         print("  python main.py candidate <name>          查看候选详情")

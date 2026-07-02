@@ -1,5 +1,5 @@
 [Unit]
-Description=Serenity Bottleneck Daily Screen
+Description=Serenity Daily Industry Research
 After=network-online.target
 
 [Service]

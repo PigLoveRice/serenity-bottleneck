@@ -88,7 +88,7 @@ def generate_report(result: ScreenResult) -> str:
     Returns:
         Markdown 文本。
     """
-    report = f"""# 🔍 Serenity 产业链瓶颈扫描
+    report = f"""# 🔍 Serenity 产业链投研
 
 **主题：** {result.theme.label}
 **运行时间：** {result.run_at}
@@ -111,6 +111,8 @@ def generate_report(result: ScreenResult) -> str:
 
 ## 候选公司评分
 
+**核心逻辑：** 产业趋势 → 逆推供应链 → 定位瓶颈环节 → 映射 A 股候选。
+
 {_render_candidate_table(result.candidates)}
 
 ---
@@ -131,7 +133,7 @@ def generate_report(result: ScreenResult) -> str:
 
 ---
 
-*生成方式：Serenity Bottleneck Agent (Phase 1)*
+*生成方式：Serenity Bottleneck Agent (Phase 3)*
 *方法论：产业链瓶颈逆推 (Bottleneck Theory)*
 """
 
